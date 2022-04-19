@@ -1,0 +1,79 @@
+<app-header></app-header>
+
+<!-- partial:index.partial.html -->
+<section  style="max-width: 100%; height: auto;"  class="my-3" id="contact">
+  
+  <h1 class="section-header">Contact us</h1>
+  
+  <div class="contact-wrapper"style="max-width: 100%; height: auto;">
+  
+  <!-- Left contact page --> 
+    
+    <form id="contact-form" style="max-width: 100%; height: auto;" (ngSubmit)="send()" #contactus="ngForm" class="form-horizontal" role="form">
+       
+      <div class="form-group my-2">
+        <div class="col-sm-12">
+          <input type="text" style="max-width: 60%;" class="form-control" id="name" placeholder="NAME" name="name" [(ngModel)]="User.name" value="" required>
+        </div>
+      </div>
+
+      <div class="form-group my-2">
+        <div class="col-sm-12">
+          <input type="email" style="max-width: 60%;" class="form-control" id="email" placeholder="EMAIL" name="email" [(ngModel)]="User.email" value="" required>
+        </div>
+      </div>
+      
+      <div class="form-group my-2">
+    
+      <textarea class="form-control" style="max-width: 60%;" rows="10" placeholder="MESSAGE" name="message" [(ngModel)]="User.message" required></textarea>
+      </div>
+      <button style="max-width: 60%;" class="btn btn-primary send-button" id="submit" type="submit" [disabled]="contactus.form.invalid" value="SEND">
+        <div class="alt-send-button">
+          <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+        </div>
+      
+      </button>
+      
+    </form>
+    
+  <!-- Left contact page --> 
+    
+      <div class="direct-contact-container">
+
+        <ul class="contact-list">
+          <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City, State</span></i></li>
+          
+          <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
+          
+          <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
+          
+        </ul>
+
+        <hr>
+        <ul class="social-media-list">
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa fa-github" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa fa-codepen" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </li>       
+        </ul>
+        <hr>
+
+        <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+
+      </div>
+    
+  </div>
+  
+</section>
+<!-- partial -->
+ 
+
+

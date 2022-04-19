@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+<form id="sign" (ngSubmit)="signup()" class="my-5" [formGroup]="registerForm" style="position: relative;" >
+    <h3 style="color: rgb(248, 246, 246);">Signup form</h3><br>
+   <br>
+    <input id="first"  type="text" style="max-width: 90%;" formControlName="name" [(ngModel)]="User.name" placeholder="Enter your Name"><br>
+    <small style="color: rgb(255, 15, 15); " *ngIf="registerForm.controls['name'].invalid"><b>Enter Your Name</b>  </small><br><br>
+    <select style="max-width: 90%;" [(ngModel)]="User.id"  formControlName="id">
+        <option *ngFor="let i of author"  [ngValue]="i">{{i}}</option>
+      </select><br>   
+      <small style="max-width: 90%; color: white;"*ngIf="adminverify()"> Admin can post his articles without superadmins approval</small><br>
+      <small style="max-width: 90%; color: white;"*ngIf="userverify()"> User need superadmins approval for posting articles</small><br>
+      <small style="color: rgb(255, 15, 15); "  *ngIf="registerForm.controls['id'].invalid"><b>Select account type</b></small><br>
+      <select *ngIf="adminverify()" style="max-width: 90%;" [(ngModel)]="User.qualification"  formControlName="qualification">
+        <option *ngFor="let i of qualification"  [ngValue]="i">{{i}}</option>
+      </select><br>
+      <small style="color: rgb(229, 253, 13); "  *ngIf="adminverify()"><b>A admin must have any of above qualification</b></small><br><br>
+   <input id="em"  style="max-width: 90%;"type="text" formControlName="email" [(ngModel)]="User.email" placeholder="Email id"><br>
+    <small style="color: rgb(255, 15, 15); "  *ngIf="registerForm.controls['email'].invalid"><b>Enter Valid Email</b></small><br><br>
+    
+    <input id="pw"  style="max-width: 90%;" type="password" formControlName="password" [(ngModel)]="User.password" placeholder="Enter Password"><br>
+    <small style="color: rgb(255, 15, 15); "  *ngIf="registerForm.controls['password'].invalid"><b>Password must contain 8 characters <br>
+        (atleast one number one uppercase and one lowercase)</b></small><br>
+    
+    <label id="signer"></label><br>
+    <button  id="but"  [disabled]="registerForm.invalid" type="submit">Submit</button><br><br>
+    <p style="color: rgb(255, 255, 255);">Already have an account? <a style="color: rgb(208, 255, 0);" routerLink="/login"><u>login</u> </a></p>
+
+</form>
+

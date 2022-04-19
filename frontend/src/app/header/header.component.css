@@ -1,0 +1,16 @@
+nav{
+    background-image: url("../../assets/images/h5.jpg");
+}
+#drop{
+    color: rgb(255, 255, 255);
+}
+#drop:hover{
+   background-color: black;
+   font-weight: bold;
+}
+#nav{
+    color: white;
+}
+#nav:hover{
+font-weight: bolder;
+}

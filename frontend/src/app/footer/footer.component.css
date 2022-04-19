@@ -1,0 +1,34 @@
+/* ===================================== Footer CSS ================================== */
+.footer {
+  padding: 50px; }
+  @media screen and (max-width: 940px) {
+    .footer {
+      padding: 30px 10px; } }
+  .footer h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Glacial Indifference", "Open Sans", sans-serif;
+    margin-bottom: 10px; }
+    .footer h2 i {
+      background-color: #cc1821;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      padding-top: 3px;
+      color: #FFF;
+      padding-top: 6px;
+      margin-right: 3px; }
+  .footer .about p {
+    font-size: .85rem; }
+  .footer .link-list li {
+    padding: 3px; }
+    .footer .link-list li i {
+      float: right; }
+
+.copy {
+  padding: 15px;
+  background-color: #cccccc26; }
+  .copy span {
+    float: right; }
+    .copy span i {
+      margin-right: 15px; }
